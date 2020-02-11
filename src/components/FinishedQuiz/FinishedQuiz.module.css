@@ -1,4 +1,4 @@
-.FinishedQuiz {
+:local(.FinishedQuiz) {
     padding: 20px;
     color: #fff;
     border: 2px solid #fff;
@@ -7,20 +7,20 @@
     margin: 0 10px;
 }
 
-.FinishedQuiz ul {
+:local(.FinishedQuiz ul) {
     list-style: none;
     padding: 0;
     margin: 0;
 }
 
-.FinishedQuiz ul li i {
+:local(.FinishedQuiz ul li i) {
     margin-left: 10px;
 }
 
-.success {
+:local(.success) {
     color: rgba(161, 240, 69, .7);
 }
 
-.error {
+:local(.error) {
     color: rgba(240, 87, 108, .7);
 }
