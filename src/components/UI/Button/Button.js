@@ -7,8 +7,6 @@ const Button = props => {
         style[props.type]
     ]
 
-    console.log({cls, result: cls.join(''), props})
-
     return (
         <button
             onClick={props.onClick}

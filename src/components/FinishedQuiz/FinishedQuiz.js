@@ -1,6 +1,7 @@
 import React from 'react'
 import style from './FinishedQuiz.module.css'
 import Button from '../UI/Button/Button'
+import {Link} from "react-router-dom";
 
 const FinishedQuiz = props => {
     const successCount = Object.keys(props.results).reduce((total, key) => {
@@ -19,9 +20,7 @@ const FinishedQuiz = props => {
                         props.results[quizItem.id] === 'error' ? 'fa-times' : 'fa-check',
                         style[props.results[quizItem.id]]
                     ];
-
-                    console.log({cls})
-
+                    
                     return (
                         <li key={index}>
                             <strong>{index + 1}</strong>. &nbsp;
@@ -36,7 +35,9 @@ const FinishedQuiz = props => {
 
             <div>
                 <Button onClick={props.onRetry} type='primary'>Retry</Button>
-                <Button onClick={props.onRetry} type='success'>Go to the list of Quiz</Button>
+                <Link to={'/'}>
+                    <Button type='success'>Go to the list of Quiz</Button>
+                </Link>
             </div>
         </div>
     )
